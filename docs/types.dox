@@ -1,0 +1,15 @@
+/**
+ * @page supported_types Supported Data Types
+ * @brief List of elemental data types supported by ElementalsLib.
+ *
+ * ## Integer types:
+ * - `int`
+ * - `char`
+ *
+ * ## Floating-point types:
+ * - `float`
+ * - `double`
+ *
+ * ## Pointer types:
+ * - `string (char*)`
+ */

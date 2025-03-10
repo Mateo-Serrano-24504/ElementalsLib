@@ -1,0 +1,42 @@
+/**
+ * @mainpage ElementalsLib
+ *
+ * # ElementalsLib documentation
+ *
+ * ElementalsLib is a C library that handles dynamic memory allocation
+ * and deallocation for some elemental data types of C, and some that
+ * are not considered 'elemental' in C but other programming languages
+ * include.
+ *
+ * To get a distribution of the library, check out the [releases](https://github.com/Mateo-Serrano-24504/ElementalsLib/releases).
+ *
+ * ## Summary of the headers
+ *
+ * - `elementals.h` →   This header includes all the functions, structs and variables
+ * needed for a complete usage of the library. If you need to use every feature, just
+ * include this.
+ * - `builders.h`   →   Includes functions to build elementals with values of different types.
+ * - `destroyers.h` →   Includes functions to deallocate elementals built with a builder.
+ * - `tracker.h`    →   Includes the functionality of the elementals tracker.
+ * - `setters.h`    →   Includes functions to set values of different types to an elemental.
+ * - `getters.h`    →   Includes functions to get casted values from an elemental.
+ *
+ * ## Some details
+ *
+ * The library includes functionality for allocating and deallocating dynamic memory for
+ * **elementals**, a generic type that can store data of some of the elemental types of C.
+ * To know all data types supported, visit [the list of supported types](\ref supported_types).
+ *
+ * It does so by using **trackers**, a struct that tracks the dynamic memory
+ * reserved for each elemental, in order to deallocate it when the program finishes.
+ * In other words, it works as a **garbage collector** for elementals.
+ *
+ * An elemental is created via a builder, then registered in the tracker in the backend. When
+ * the tracker is indicated to finish its functionality, it frees the dynamic memory that
+ * all calls of builders have reserved.
+ *
+ * This allows users to only focus on the usage of the elementals, through the use of
+ * **setters** and **getters**, 
+ *
+ * For more detailed explanations, visit the [functions documentation](globals.html).
+ */
